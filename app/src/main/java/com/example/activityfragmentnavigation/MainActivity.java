@@ -13,7 +13,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity
 {
     Button button1, button2;
-    String abc;
+    String name;
+    int rollnumber;
     @SuppressLint({"MissingInflatedId", "LocalSuppress"})
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -22,7 +23,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         button1=(Button) findViewById(R.id.btn1);
         button2=(Button) findViewById(R.id.btn2);
-        abc="manish prabhakar";
+        name="manish prabhakar";
+        rollnumber=7656140;
 
         button1.setOnClickListener(new View.OnClickListener()
         {
@@ -30,7 +32,9 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent i=new Intent(getApplicationContext(),MainActivity2.class);
-                i.putExtra("value",abc);//->Passing data by bundle passing
+                //->Passing data by bundle passing
+                i.putExtra("value",name);
+                i.putExtra("roll_no",rollnumber);
                 startActivity(i);
             }
         });
@@ -43,6 +47,10 @@ public class MainActivity extends AppCompatActivity
                 button1.setVisibility(View.GONE);
                 button2.setVisibility(View.GONE);
                 Fragment frg=new BlankFragment();
+                Bundle args=new Bundle();
+                args.putString("name",name);
+                args.putInt("roll_no",rollnumber);
+                BlankFragment.putArguments(args);
                 FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.container,frg).commit();
             }
