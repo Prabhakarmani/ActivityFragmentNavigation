@@ -6,7 +6,7 @@
     android:id="@+id/container2"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".BlankFragment2">
+    tools:context=".Passing.bundle.BlankFragment2">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

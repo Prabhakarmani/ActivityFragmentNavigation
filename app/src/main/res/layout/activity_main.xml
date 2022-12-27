@@ -7,7 +7,7 @@
     android:id="@+id/container"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Passing.bundle.MainActivity">
 
     <Button
         android:layout_width="wrap_content"

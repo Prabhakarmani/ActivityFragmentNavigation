@@ -1,4 +1,4 @@
-package com.example.activityfragmentnavigation;
+package com.example.activityfragmentnavigation.Passing.bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.activityfragmentnavigation.R;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent i=new Intent(getApplicationContext(),MainActivity2.class);
+                Intent i=new Intent(getApplicationContext(), MainActivity2.class);
                 //->Passing data by bundle passing
                 i.putExtra("value",name);
                 i.putExtra("roll_no",rollnumber);

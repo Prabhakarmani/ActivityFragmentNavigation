@@ -1,4 +1,4 @@
-package com.example.activityfragmentnavigation;
+package com.example.activityfragmentnavigation.Passing.bundle;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.activityfragmentnavigation.R;
 
 public class BlankFragment extends Fragment
 {
@@ -36,7 +38,7 @@ public class BlankFragment extends Fragment
             @Override
             public void onClick(View view)
             {
-                Intent i = new Intent(getActivity(),MainActivity.class);
+                Intent i = new Intent(getActivity(), MainActivity.class);
                 startActivity(i);
             }
         });

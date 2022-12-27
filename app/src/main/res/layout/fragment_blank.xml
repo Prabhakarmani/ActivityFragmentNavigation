@@ -7,7 +7,7 @@
     android:id="@+id/fragment1"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BlankFragment">
+    tools:context=".Passing.bundle.BlankFragment">
 
     <TextView
         android:layout_width="wrap_content"

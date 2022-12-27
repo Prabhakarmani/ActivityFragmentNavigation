@@ -1,9 +1,11 @@
-package com.example.activityfragmentnavigation;
+package com.example.activityfragmentnavigation.Passing.bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.example.activityfragmentnavigation.R;
 
 public class MainActivity2 extends AppCompatActivity
 {
