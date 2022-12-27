@@ -13,6 +13,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity
 {
     Button button1, button2;
+    String abc;
     @SuppressLint({"MissingInflatedId", "LocalSuppress"})
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -21,8 +22,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         button1=(Button) findViewById(R.id.btn1);
         button2=(Button) findViewById(R.id.btn2);
-
-
+        abc="manish prabhakar";
 
         button1.setOnClickListener(new View.OnClickListener()
         {
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent i=new Intent(getApplicationContext(),MainActivity2.class);
+                i.putExtra("value",abc);//->Passing data by bundle passing
                 startActivity(i);
             }
         });
